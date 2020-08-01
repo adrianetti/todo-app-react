@@ -12,7 +12,7 @@ function App() {
   
   useEffect(() => {
     db.collection('todos').orderBy('timestamp', 'desc').onSnapshot(snapshot => {
-      setTodos(snapshot.docs.map(doc => doc.data().todos));
+      setTodos(snapshot.docs.map(doc => ({todo: doc.data().todos, id: doc.id })));
     })
   }, [])
 
@@ -54,7 +54,7 @@ function App() {
       <ul>
         {
           todos.map(todo =>
-            <Todo text={todo}/>
+            <Todo todo={todo}/>
           )
         }
       </ul>
