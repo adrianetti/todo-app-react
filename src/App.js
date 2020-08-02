@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hola amorcito, porfa pon tareas a ver si esta joda sirve👇👇</h1>
+      <h1>Escribe aquí tu tarea, querido usuario👇👇</h1>
 
       <form>
         <FormControl>
